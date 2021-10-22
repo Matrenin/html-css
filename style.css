@@ -1168,7 +1168,213 @@ body {
   text-transform: uppercase;
 }
 
+.content__filter .nav__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border: none;
+  background: transparent;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6F6E6E;
+  position: relative;
+}
+
 .content__filter .filter__text {
-  margin-right: 48px;
+  margin-right: 11px;
+}
+
+.content__filter .filter__icon {
+  fill: #6F6E6E;
+  position: absolute;
+  top: 5px;
+  right: -10px;
+}
+
+.content__filter input:focus,
+.content__filter button:focus {
+  outline: none;
+}
+
+.content__filter .list__size {
+  margin-left: 28px;
+  margin-right: 28px;
+  width: 80px;
+  border: none;
+  background: transparent;
+}
+
+.content__filter .list__size-btn {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #6F6E6E;
+  background: transparent;
+  text-align: left;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.content__filter .list__size-btn svg {
+  fill: currentColor;
+  position: absolute;
+  top: 5px;
+  left: 39px;
+}
+
+.content__filter .list__size-btn:hover {
+  color: #F16D7F;
+}
+
+.content__filter .list__size-btn:active {
+  color: black;
+}
+
+.content__filter .list__size-btn:active svg {
+  fill: currentColor;
+}
+
+.content__filter #switch {
+  display: none;
+}
+
+.content__filter #switch:checked ~ .list__size-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content__filter .list__size-menu {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 5px;
+  padding: 9.5px 9.5px 9.5px 31px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fff;
+}
+
+.content__filter .list__size-item {
+  display: none;
+}
+
+.content__filter .list__size-item:nth-child(1):checked ~
+.list__size-title:nth-child(2):before,
+.content__filter .list__size-item:nth-child(3):checked ~
+.list__size-title:nth-child(4):before,
+.content__filter .list__size-item:nth-child(5):checked ~
+.list__size-title:nth-child(6):before,
+.content__filter .list__size-item:nth-child(7):checked ~
+.list__size-title:nth-child(8):before {
+  background-image: url("img/checkmark.png");
+  background-position: center;
+  background: cover;
+}
+
+.content__filter .list__size-title {
+  display: block;
+  margin-bottom: 6px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #6F6E6E;
+}
+
+.content__filter .list__size-title:before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #EBEBEB;
+  position: absolute;
+  top: 1;
+  left: -23px;
+}
+
+.pages {
+  width: 283px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #EBEBEB;
+}
+
+.pages .pages__btn {
+  width: 8px;
+  border: none;
+  background: transparent;
+}
+
+.pages .left {
+  background-image: url("img/vector-left.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 18px;
+  margin-left: 15px;
+}
+
+.pages .right {
+  background-image: url("img/vector-right.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.pages .pages__box {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 11px 0;
+  width: 202px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pages .pages__list a {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #EBEBEB;
+}
+
+.pages .next::after {
+  content: "...";
+  color: #EBEBEB;
+}
+
+.pages .pages__list a:hover {
+  color: #EF5B70;
+}
+
+.pages .pages__list a:active {
+  color: purple;
+}
+
+.pages .next:hover::after {
+  color: #EF5B70;
+}
+
+.pages .next:active::after {
+  color: purple;
 }
 /*# sourceMappingURL=style.css.map */
