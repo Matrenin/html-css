@@ -5,7 +5,7 @@
     &__top {
         height: 777px;
         background: #F7F7F7;
-        background-image: url("img/women.png");
+        background-image: url("../img/women.png");
         background-repeat: no-repeat;
         background-position: center;
         display: flex;
@@ -99,7 +99,80 @@
         left: -299px;
     }
 
-    .women__box-filter{
+    .women__size {
+        width: 100%;
+    }
+
+    .women__size-btn {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #6F6E6E;
+    }
+
+    .women__size-btn span {
+        margin-right: 9px;
+    }
+
+    .women__size-btn svg {
+        fill: #6F6E6E;
+    }
+
+    #women-switch {
+        display: none;
+    }
+
+    #women-switch:checked ~ .women__size-menu {        
+        display: flex;
+        max-width: 79px;
+        width: 100%;
+
+    }
+
+    .women__size-menu {
+        display: none;
+        flex-direction: column;
+        margin-top: 5px;
+        padding: 9.5px 9.5px 9.5px 31px;
+        box-sizing: border-box;
+        background: #fff;
+        position: absolute;
+        top: 24px;
+        left: 202px;
+        z-index: 6;
+    }
+
+    .women__size-item {
+        display: none;
+    }
+
+    .women__size-title {
+        text-align: center;
+        display: block;
+        margin-bottom: 6px;
+        position: relative;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #6F6E6E;
+    }
+
+    .women__size-title::before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        border: 1px solid #EBEBEB;
+        position: absolute;
+        top: 1;
+        left: -14px;
+    }
+
+    .women__box-filter{    
+        position: relative;   
         margin-top: 130px;
         display: flex;
     }
@@ -109,10 +182,11 @@
         border: none;
         background: transparent;
         align-items: center;
-        padding-right: 42px;
+        padding-right: 22px;
     }
 
     .women__btn-filter p {
+        width: 120px;
         font-size: 14px;
         line-height: 17px;
         color: #6F6E6E;
@@ -124,7 +198,7 @@
         fill: #6F6E6E;
     }
 
-    .women__btn-bot {
+    .women__btn-bot {        
         margin-top: 49px;
         padding: 16px 26px 13px 72px;
         border: 1px solid #FF6A6A;
@@ -133,10 +207,10 @@
         font-size: 16px;
         line-height: 19px;
         color: #F26376;
-        background-image: url("img/cart2.png");
+        background-image: url("../../img/cart2.png");
         background-repeat: no-repeat;
         background-position: left 23px center;
-        margin-bottom: 65px;
+        margin-bottom: 65px;        
     }
 }
 

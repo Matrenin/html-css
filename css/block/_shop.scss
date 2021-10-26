@@ -1,0 +1,214 @@
+.shop {    
+    margin-top: 96px;
+    margin-bottom: 128px;
+    display: flex;
+    justify-content: space-between;
+
+
+    .shop__left {
+        max-width: 652px;
+        width: 100%;
+    }
+    
+    .shop__item {
+        display: flex;
+        position: relative;
+        margin-bottom: 40px;
+        box-shadow: 20px 20px 40px 4px rgba(0, 0, 0, .3);
+    }
+    
+    .shop__descript {
+        max-width: 262px;
+        width: 100%;
+        margin: 22px 97px 62px 31px;
+    }
+    
+    .shop__title {
+        margin-bottom: 43px;
+    }
+    
+    .shop__title h3 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: #222222;
+        text-transform: uppercase;
+    }
+    
+    .shop__item-text {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        color: #575757;
+        margin-bottom: 6px;  
+    }
+    
+    .shop__item-text span {
+        color: #F16D7F;
+    }
+    
+    .shop__descript::after {
+        content: "";
+        width: 20px;
+        height: 2px;
+        background: #000;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 35px;;
+        right:22px;
+    }
+    
+    .shop__descript::before {
+        content: "";
+        width: 20px;
+        height: 2px;
+        background: #000;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 35px;;
+        right:22px;
+    }
+    
+    .quantity {
+        position: relative;
+    }
+    
+    .quantity::before {
+        content: "2";
+        padding: 1px 15px 1px 15px;
+        border: 1px solid #EAEAEA;
+        position: absolute;
+        top: 0;
+        right: 102px;;
+    }
+    
+    .box__btn {
+        margin-top: 72px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .box__btn button {
+        border: 1px solid #A4A4A4;
+        background: transparent;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+        padding: 17px 40px 14px 40px;
+        text-transform: uppercase;
+    }
+    
+    .shop__right {
+        max-width: 360px;
+        width: 100%;
+        margin-top: 17px;
+    }
+    
+    .shop__form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .shop__form h3 {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #222222;
+    }
+    
+    .shop__form input {
+        min-height: 45px;
+        box-sizing: border-box;
+        margin-top: 20px;
+        border: 1px solid #A4A4A4;  
+        padding-left: 17px;
+    }
+    
+    input::placeholder {  
+        color: #B1B1B1;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .shop__form button {
+        margin-top: 24px;
+        padding: 10px 12px;
+        border: 1px solid #A4A4A4;
+        max-width: 100px;
+        width: 100%;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 13px;
+        color: #4A4A4A;
+        box-sizing: border-box;
+        background: transparent;
+    }
+
+    .shop__total {
+        margin-top: 57px;
+        max-width: 360px;
+        width: 100%;
+        background: #F5F3F3;
+        min-height: 214px;
+    }
+
+    .shop__box-text {
+        margin-right: 34px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: 39px;
+    }
+
+    .shop__total-text {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13px;
+        color: #4A4A4A;
+    }
+
+    .shop__total-title {
+        margin-top: 12px;
+    }
+
+    .shop__total-title {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #222222;
+    }
+
+    .shop__total-title span {
+        color: #F16D7F;
+    }
+
+    .shop__total-btn {
+        display: flex;
+        justify-content: center;
+        margin: 39px 0 42px;
+        position: relative;
+    }
+
+    .shop__total-btn button {
+        width: 273px;
+        padding: 15px;
+        background: #F16D7F;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        border: none;
+    }
+
+    .shop__total-btn::before {
+        content: "";
+        width: 275px;
+        height: 1px;
+        background: #E2E2E2;
+        position: absolute;
+        top: -17px;
+        left: 39px;
+    }
+}
