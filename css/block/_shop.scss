@@ -12,7 +12,7 @@
     
     .shop__item {
         display: flex;
-        position: relative;
+        justify-content: space-between;
         margin-bottom: 40px;
         box-shadow: 20px 20px 40px 4px rgba(0, 0, 0, .3);
     }
@@ -20,7 +20,7 @@
     .shop__descript {
         max-width: 262px;
         width: 100%;
-        margin: 22px 97px 62px 31px;
+        margin: 22px 0 62px 0;
     }
     
     .shop__title {
@@ -40,48 +40,54 @@
         font-size: 22px;
         line-height: 26px;
         color: #575757;
-        margin-bottom: 6px;  
+        margin-bottom: 6px;
     }
     
-    .shop__item-text span {
+    .shop__span-one {
         color: #F16D7F;
     }
-    
-    .shop__descript::after {
-        content: "";
-        width: 20px;
-        height: 2px;
-        background: #000;
-        transform: rotate(45deg);
-        position: absolute;
-        top: 35px;;
-        right:22px;
+
+    .shop__span-two {
+        color: #656565;
+        margin-left: 40px;
+        padding: 2px 15px;
+        border: 1px solid #EAEAEA;
     }
     
-    .shop__descript::before {
-        content: "";
-        width: 20px;
-        height: 2px;
-        background: #000;
-        transform: rotate(-45deg);
-        position: absolute;
-        top: 35px;;
-        right:22px;
-    }
-    
-    .quantity {
+
+    .close__btn {
+        display: block;
+        width: 18px;
+        height: 18px;
+        border: none;
+        margin-top: 28px;
+        margin-right: 24px;
+        background: transparent;
         position: relative;
     }
-    
-    .quantity::before {
-        content: "2";
-        padding: 1px 15px 1px 15px;
-        border: 1px solid #EAEAEA;
+
+    .close__btn::before {
+        content: "";
+        width: 20px;
+        height: 2px;
+        background: #575757;
+        transform: rotate(45deg);
         position: absolute;
-        top: 0;
-        right: 102px;;
+        top: 6px;
+        left: -3px;
     }
-    
+
+    .close__btn::after {
+        content: "";
+        width: 20px;
+        height: 2px;
+        background: #575757;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 6px;
+        left: -3px;
+    }
+       
     .box__btn {
         margin-top: 72px;
         display: flex;

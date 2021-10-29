@@ -3,11 +3,13 @@
     z-index: 0;
 
     &__top {
-        height: 777px;
+        width: 100%;
+        min-height: 777px;
         background: #F7F7F7;
         background-image: url("../img/women.png");
+        
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -30,7 +32,7 @@
     }
 
     &__bot {
-        width: 1140px;
+        max-width: 1140px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -182,11 +184,11 @@
         border: none;
         background: transparent;
         align-items: center;
-        padding-right: 22px;
+        padding: 0 22px;
     }
 
     .women__btn-filter p {
-        width: 120px;
+        max-width: 120px;
         font-size: 14px;
         line-height: 17px;
         color: #6F6E6E;
@@ -207,7 +209,7 @@
         font-size: 16px;
         line-height: 19px;
         color: #F26376;
-        background-image: url("../../img/cart2.png");
+        background-image: url("../img/cart2.png");
         background-repeat: no-repeat;
         background-position: left 23px center;
         margin-bottom: 65px;        
