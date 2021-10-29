@@ -11,6 +11,7 @@ $red: #F16D7F;
 
 .container {
     max-width: 1140px;
+    
     margin: 0 auto;
 }
 
@@ -85,9 +86,11 @@ $red: #F16D7F;
     }
 
     .merch__item {
-        width: 360px;
+        max-width: 360px;
+        width: 100%;
         min-height: 260px;
-        background-image : url("../img/Group36.png"); 
+        background-image : url("../img/Group36.png");
+        background-position: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -119,14 +122,18 @@ $red: #F16D7F;
     }
 
     .merch__block-bot {
+        max-width: 1140px;
+        width: 100%;
         margin-top: 30px;
-        background-image: url("../img/Group39.png");
+        background-image: url("../img/Group39.png"); 
+        background-position: 100%;      
         min-height: 180px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
 }
 
 .content {  
@@ -156,6 +163,7 @@ $red: #F16D7F;
 
     .content__item {
         max-width: 360px;
+        width: 100%;
         margin-bottom: 50px;
         background: #F8F8F8;
     }
@@ -367,8 +375,9 @@ $red: #F16D7F;
 @import "../css/block/footer";
 
 @import "../css/block/shop";
+@import "../css/block/regist";
 
-/* =============Index-tablet========== */
+/* =============Index========== */
 
 @media(max-width: 768px) {
     .container {
@@ -423,7 +432,11 @@ $red: #F16D7F;
             min-height: 168px;
             background-size: 100%;
             background-repeat: no-repeat;
-        }       
+        }
+        
+        .merch__block-bot {
+            max-width: 735px;
+        }
     }
 
     .content {
@@ -501,8 +514,6 @@ $red: #F16D7F;
         margin-right: 32px;
     }
 }
-
-/* =============Index-mobile========== */
 
 @media(max-width: 375px) {
     .header {
@@ -640,7 +651,7 @@ $red: #F16D7F;
     }
 }
 
-/* =============Catalog-tablet========== */
+/* =============Catalog========== */
 
 @media(max-width: 768px) {
     .arrival__box {
@@ -663,8 +674,6 @@ $red: #F16D7F;
         margin-top: 24px;
     }
 }
-
-/* =============Catalog-mobile========== */
 
 @media(max-width:375px) {
     .arrival__box {
@@ -720,3 +729,71 @@ $red: #F16D7F;
         display: block;
     }
 }
+
+/* =============Product========== */
+
+@media(max-width: 768px) {
+    .women {
+        display: flex;
+        flex-direction: column;
+
+        .women__bot {
+            max-width: 768px;
+            width: 100%;
+            margin-bottom: 105px;
+        }
+    }
+
+    .content__item:last-child {
+        display: none;
+    }
+}
+
+@media(max-width: 375px) {
+    .women{
+        .women__top {
+            background-size: 90%;
+            background-position: center;        
+        }
+
+        .women__bot {
+            max-width: 375px;
+            width: 100%;
+            margin-bottom: 64px;
+
+            .women__box-filter {
+                box-sizing: border-box;
+                margin-top: 82px;
+        
+                .women__btn-filter  p {
+                    font-size: 10px;
+                    line-height: 12px;
+                }
+
+                .women__size-btn span {
+                    font-size: 10px;
+                    line-height: 12px;
+                }
+            }
+        }
+    }
+    .women__text {
+        padding: 0 24px;
+    }
+   
+    .women .women__price::after {
+        content: "";
+        width: 160px;
+        border: 1px solid #EAEAEA;
+        position: absolute;
+        top: 60px;
+        left: -55px;
+    }
+
+    .subscribe {
+        margin-top: 60px;
+    }
+}
+
+/* =============Cart========== */
+

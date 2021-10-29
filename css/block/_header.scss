@@ -198,6 +198,7 @@
 
     .cart__icon {
         fill: currentColor;
+        padding-right: 10px;
     }
 
     .cart__btn-txt {
@@ -213,6 +214,6 @@
         line-height: 14px;
         position: absolute;
         top: -7px;
-        right: -10px;
+        right: 0;
     }
 }
