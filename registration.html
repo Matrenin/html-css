@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>Registration</title>
 </head>
@@ -14,7 +14,7 @@
         <div class="header__box container">   
             <div class="header__left">
                 <a href="index.html" class="header__logo">
-                    <img src="../img/brand.svg" alt="header-logo" class="header__logo-left" height = "19">
+                    <img src="img/brand.svg" alt="header-logo" class="header__logo-left" height = "19">
                 </a>                    
                 <form action="#" class="search">
                     <label for="header-search" class = "search__icon-label"></label>
@@ -118,28 +118,24 @@
             </div>
         </section>
 
-        <section class="regist container">
-            <div class="regist__left">
+        <section class="regist container">            
+            <form action="#" class="regist__form">
                 <h3>Your Name</h3>
-                <form action="#" class="regist__form-top">
-                    <input type="text" placeholder="First Name">
-                    <input type="text" placeholder="Last Name">
-                </form>
-                <div class="regist__radio">
-                    <input type="radio">
-                    <span>Male</span>
-                    <input type="radio">
-                    <span>Female</span>
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">                
+                <div class="regist__radio">                       
+                    <input type="radio" id="male" value="male" name=choisee>
+                    <label for="male">Male</label>                        
+                    <input type="radio" id="female" value="female" name="choisee">
+                    <label for="female">Female</label>
                 </div>
-                <h3>Login details</h3>
-                <form action="#" class="regist__form-bot">
-                    <input type="text" placeholder="Email">
-                    <input type="text" placeholder="Password">
-                </form>
+                <h3>Login details</h3>               
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
                 <p>Please use 8&nbsp;or more characters, with at&nbsp;least 1&nbsp;number and a&nbsp;mixture of&nbsp;uppercase and lowercase letters</p>
                 <button type="submit">JOIN NOW</button>
-            </div>
-
+            </form>
+            
             <div class="regist__right">
                 <p>LOYALTY HAS ITS PERKS</p>
                 <p>Get in&nbsp;on&nbsp;the loyalty program where you can earn points and unlock serious perks. Starting with these as&nbsp;soon as&nbsp;you join:</p>

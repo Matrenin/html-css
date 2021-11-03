@@ -385,6 +385,7 @@ body {
   position: absolute;
   top: 1;
   left: 1;
+  z-index: 20;
 }
 
 .content__filter .filter__list-item {
@@ -572,6 +573,7 @@ body {
   position: absolute;
   top: 1;
   left: 1;
+  z-index: 20;
 }
 
 .content__filter .list__size-item {
@@ -1009,9 +1011,9 @@ body {
 .merch .merch__item {
   max-width: 360px;
   width: 100%;
-  min-height: 260px;
+  height: 260px;
   background-image: url("../img/Group36.png");
-  background-position: 100%;
+  background-size: 100% 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1055,8 +1057,8 @@ body {
   width: 100%;
   margin-top: 30px;
   background-image: url("../img/Group39.png");
-  background-position: 100%;
-  min-height: 180px;
+  background-size: 100% 100%;
+  height: 180px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1074,6 +1076,7 @@ body {
 
 .content {
   margin-top: 51px;
+  z-index: 1;
 }
 
 .content .content__title {
@@ -1108,6 +1111,16 @@ body {
   width: 100%;
   margin-bottom: 50px;
   background: #F8F8F8;
+  position: relative;
+}
+
+.content .content__item:hover .content__photo {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
+.content .content__item:hover .ground {
+  background: rgba(58, 56, 56, 0.66);
 }
 
 .content .content__item-title {
@@ -1120,6 +1133,7 @@ body {
 }
 
 .content .content__item-text {
+  display: block;
   font-weight: 300;
   font-size: 14px;
   line-height: 17px;
@@ -1138,14 +1152,55 @@ body {
 }
 
 .content .ground {
-  background-image: url("img/Rectangle2copy.fon.png");
+  max-width: 360px;
+  width: 100%;
+  height: 420px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 420px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .content__item-btn {
+  visibility: hidden;
+  position: absolute;
+  top: 26%;
+  left: 32%;
+  border: 1px solid #fff;
+  padding: 11px 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  color: #fff;
+}
+
+.content .content__item-btn svg {
+  fill: #fff;
+  margin-right: 10px;
+}
+
+.content .content__item-btn span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+}
+
+.content .content__item:hover .content__item-btn {
+  visibility: visible;
+}
+
+.content .content__item-btn:hover {
+  color: red;
 }
 
 .content .content__btn {
@@ -1155,6 +1210,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.content .content__link:hover {
+  background: #F16D7F;
+  color: #fff;
 }
 
 .content .content__link {
@@ -1426,6 +1486,9 @@ body {
 }
 
 .shop .shop__item {
+  max-width: 652px;
+  width: 100%;
+  min-height: 306px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1435,6 +1498,18 @@ body {
   margin-bottom: 40px;
   -webkit-box-shadow: 20px 20px 40px 4px rgba(0, 0, 0, 0.3);
           box-shadow: 20px 20px 40px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.shop .shop__photo {
+  max-width: 262px;
+  width: 100%;
+  min-height: 306px;
+}
+
+.shop .shop__photo img {
+  width: 100%;
+  height: 100%;
 }
 
 .shop .shop__descript {
@@ -1479,10 +1554,9 @@ body {
   width: 18px;
   height: 18px;
   border: none;
-  margin-top: 28px;
+  margin-top: 22px;
   margin-right: 24px;
   background: transparent;
-  position: relative;
 }
 
 .shop .close__btn::before {
@@ -1493,8 +1567,8 @@ body {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   position: absolute;
-  top: 6px;
-  left: -3px;
+  top: 28px;
+  right: 24px;
 }
 
 .shop .close__btn::after {
@@ -1505,8 +1579,8 @@ body {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   position: absolute;
-  top: 6px;
-  left: -3px;
+  top: 28px;
+  right: 24px;
 }
 
 .shop .box__btn {
@@ -1525,7 +1599,7 @@ body {
   font-weight: 300;
   font-size: 14px;
   line-height: 17px;
-  color: #000000;
+  color: #575757;
   padding: 17px 40px 14px 40px;
   text-transform: uppercase;
 }
@@ -1554,6 +1628,8 @@ body {
 }
 
 .shop .shop__form input {
+  max-width: 360px;
+  width: 100%;
   min-height: 45px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1693,14 +1769,7 @@ body {
   margin-bottom: 96px;
 }
 
-.regist__left h3 {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 19px;
-  color: #222222;
-}
-
-.regist__form-top {
+.regist__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1710,9 +1779,17 @@ body {
           flex-direction: column;
 }
 
-.regist__form-top input {
+.regist__form h3 {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+}
+
+.regist__form input {
   margin-top: 20px;
-  width: 360px;
+  max-width: 360px;
+  width: 100%;
   height: 44px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1723,23 +1800,24 @@ body {
   padding-left: 16px;
 }
 
-.regist__form-top input::-webkit-input-placeholder {
+.regist__form input::-webkit-input-placeholder {
   color: #B1B1B1;
 }
 
-.regist__form-top input:-ms-input-placeholder {
+.regist__form input:-ms-input-placeholder {
   color: #B1B1B1;
 }
 
-.regist__form-top input::-ms-input-placeholder {
+.regist__form input::-ms-input-placeholder {
   color: #B1B1B1;
 }
 
-.regist__form-top input::placeholder {
+.regist__form input::placeholder {
   color: #B1B1B1;
 }
 
 .regist .regist__radio {
+  min-height: 17px;
   margin-top: 31px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1751,67 +1829,31 @@ body {
 }
 
 .regist .regist__radio input {
-  color: #A4A4A4;
-  margin-right: 10px;
+  max-width: 17px;
+  width: 100%;
+  min-height: 17px;
+  margin: 0 10px 0 20px;
 }
 
-.regist .regist__radio span {
+.regist .regist__radio label {
   font-weight: 300;
   font-size: 11px;
   line-height: 13px;
-  color: #000000;
-  margin-right: 20px;
 }
 
-.regist__form-bot {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.regist__form-bot input {
-  margin-top: 20px;
-  width: 360px;
-  height: 44px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 1px solid #A4A4A4;
-  font-weight: 300;
-  font-size: 13px;
-  line-height: 16px;
-  padding-left: 16px;
-}
-
-.regist__form-bot input::-webkit-input-placeholder {
-  color: #B1B1B1;
-}
-
-.regist__form-bot input:-ms-input-placeholder {
-  color: #B1B1B1;
-}
-
-.regist__form-bot input::-ms-input-placeholder {
-  color: #B1B1B1;
-}
-
-.regist__form-bot input::placeholder {
-  color: #B1B1B1;
-}
-
-.regist .regist__left p {
+.regist .regist__form p {
   margin-top: 15px;
-  width: 359px;
+  max-width: 360px;
+  width: 100%;
   font-weight: 300;
   font-size: 13px;
   line-height: 16px;
   color: #B1B1B1;
 }
 
-.regist .regist__left button {
+.regist .regist__form button {
+  max-width: 167px;
+  width: 100%;
   margin-top: 39px;
   font-size: 14px;
   line-height: 17px;
@@ -1826,7 +1868,7 @@ body {
   position: relative;
 }
 
-.regist .regist__left button::after {
+.regist .regist__form button::after {
   content: "";
   width: 16px;
   height: 2px;
@@ -1901,7 +1943,7 @@ body {
     color: #222222;
   }
   .merch {
-    margin: 20px 16px 164px;
+    margin: 20px 16px 155px;
   }
   .merch .merch__block-top {
     display: -webkit-box;
@@ -1910,12 +1952,14 @@ body {
   }
   .merch .merch__item {
     max-width: 232px;
-    min-height: 168px;
-    background-size: 100%;
+    height: 168px;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
   }
   .merch .merch__block-bot {
     max-width: 735px;
+    width: 100%;
+    height: 116px;
   }
   .content .content__subtitle {
     margin-top: 3px;
@@ -1929,6 +1973,9 @@ body {
   }
   .content .content__btn {
     margin-top: 33px;
+  }
+  .content .content__item:nth-child(6) {
+    display: block;
   }
   .feature {
     margin-top: 65px;
@@ -2048,11 +2095,29 @@ body {
   .content {
     margin-top: 64px;
   }
+  .content .content__filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 260px;
+    width: 100%;
+  }
+  .content .content__filter .list__size {
+    margin: 0 12px;
+  }
   .content .content__block {
     margin: 0 8px 0;
   }
   .content .content__btn {
     margin-top: 41px;
+  }
+  .content .content__photo {
+    width: 100%;
+  }
+  .content .ground {
+    max-width: 360px;
+    width: 100%;
+    height: 420px;
   }
   .feature {
     margin-top: 96px;
@@ -2238,4 +2303,157 @@ body {
 }
 
 /* =============Cart========== */
+@media (max-width: 768px) {
+  .shop {
+    margin-top: 68px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .shop .box__btn {
+    max-width: 508px;
+    width: 100%;
+    margin: 60px auto;
+  }
+  .shop .shop__right {
+    max-width: 754px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .shop .shop__right .shop__form input {
+    width: 360px;
+  }
+}
+
+@media (max-width: 375px) {
+  .arrival__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .arrival__box .arrival__title {
+    margin-top: 50px;
+  }
+  .shop {
+    padding: 0 8px;
+  }
+  .shop .shop__item {
+    max-width: 358px;
+    width: 100%;
+    height: 188px;
+  }
+  .shop .shop__item .shop__title {
+    margin-bottom: 26px;
+  }
+  .shop .shop__item .shop__descript {
+    margin-top: 13px;
+    padding-left: 16px;
+  }
+  .shop .shop__item .shop__descript h3 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .shop .shop__item .shop__descript p {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .shop .shop__item .shop__descript p .shop__span-two {
+    margin-left: 20px;
+  }
+  .shop .shop__item .close__btn {
+    width: 10px;
+    height: 10px;
+    margin-top: 17px;
+    margin-right: 12px;
+  }
+  .shop .shop__item .close__btn::before {
+    content: "";
+    width: 12px;
+    height: 2px;
+    background: #575757;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: absolute;
+    top: 17px;
+    right: 12px;
+  }
+  .shop .shop__item .close__btn::after {
+    content: "";
+    width: 12px;
+    height: 2px;
+    background: #575757;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    position: absolute;
+    top: 17px;
+    right: 12px;
+  }
+  .shop .box__btn button {
+    max-width: 174px;
+    width: 100%;
+    min-height: 32px;
+    padding: 9px 13px 9px 13px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .shop .shop__total {
+    margin-top: 48px;
+  }
+  .shop__right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* =============Registration========== */
+@media (max-width: 768px) {
+  .regist {
+    margin-top: 40px;
+    padding: 0 16px;
+  }
+  .regist__right {
+    max-width: 354px;
+    width: 100%;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+@media (max-width: 375px) {
+  .regist {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 9px;
+    margin-bottom: 96px;
+  }
+  .regist .regist__right {
+    margin-top: 40px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
