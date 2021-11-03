@@ -112,6 +112,7 @@
         position: absolute;
         top: 1;
         left: 1;
+        z-index: 20;
     }
     
     .filter__list-item {
@@ -284,6 +285,7 @@
         position: absolute;
         top: 1;
         left: 1; 
+        z-index: 20;
     }
 
     .list__size-item {

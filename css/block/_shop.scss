@@ -11,11 +11,26 @@
     }
     
     .shop__item {
+        max-width: 652px;
+        width: 100%;
+        min-height: 306px;
         display: flex;
         justify-content: space-between;
         margin-bottom: 40px;
         box-shadow: 20px 20px 40px 4px rgba(0, 0, 0, .3);
+        position: relative;
     }
+
+     .shop__photo {
+         max-width: 262px;
+         width: 100%;
+         min-height: 306px;
+     }
+
+     .shop__photo img {
+         width: 100%;
+         height: 100%;
+     }
     
     .shop__descript {
         max-width: 262px;
@@ -60,10 +75,10 @@
         width: 18px;
         height: 18px;
         border: none;
-        margin-top: 28px;
+        margin-top: 22px;
         margin-right: 24px;
         background: transparent;
-        position: relative;
+
     }
 
     .close__btn::before {
@@ -73,8 +88,8 @@
         background: #575757;
         transform: rotate(45deg);
         position: absolute;
-        top: 6px;
-        left: -3px;
+        top: 28px;
+        right: 24px;
     }
 
     .close__btn::after {
@@ -84,8 +99,8 @@
         background: #575757;
         transform: rotate(-45deg);
         position: absolute;
-        top: 6px;
-        left: -3px;
+        top: 28px;
+        right: 24px;
     }
        
     .box__btn {
@@ -100,7 +115,7 @@
         font-weight: 300;
         font-size: 14px;
         line-height: 17px;
-        color: #000000;
+        color: #575757;;
         padding: 17px 40px 14px 40px;
         text-transform: uppercase;
     }
@@ -124,6 +139,8 @@
     }
     
     .shop__form input {
+        max-width: 360px;
+        width: 100%;
         min-height: 45px;
         box-sizing: border-box;
         margin-top: 20px;

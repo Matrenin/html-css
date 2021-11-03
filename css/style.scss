@@ -88,9 +88,9 @@ $red: #F16D7F;
     .merch__item {
         max-width: 360px;
         width: 100%;
-        min-height: 260px;
+        height: 260px;
         background-image : url("../img/Group36.png");
-        background-position: 100%;
+        background-size: 100% 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -114,11 +114,11 @@ $red: #F16D7F;
     }
 
     .men {       
-        background-image : url("../img/Group37.png");         
+        background-image : url("../img/Group37.png");      
     }
 
     .kids {
-        background-image : url("../img/Group38.png");        
+        background-image : url("../img/Group38.png");       
     }
 
     .merch__block-bot {
@@ -126,8 +126,8 @@ $red: #F16D7F;
         width: 100%;
         margin-top: 30px;
         background-image: url("../img/Group39.png"); 
-        background-position: 100%;      
-        min-height: 180px;
+        background-size: 100% 100%;      
+        height: 180px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -137,7 +137,8 @@ $red: #F16D7F;
 }
 
 .content {  
-    margin-top: 51px;  
+    margin-top: 51px;
+    z-index: 1;
 
     .content__title {
         text-align: center;
@@ -166,6 +167,15 @@ $red: #F16D7F;
         width: 100%;
         margin-bottom: 50px;
         background: #F8F8F8;
+        position: relative;
+    }
+
+    .content__item:hover .content__photo {
+        filter: brightness(50%);
+    }
+
+    .content__item:hover .ground {
+        background: rgba(58, 56, 56, 0.66);
     }
 
     .content__item-title {
@@ -178,6 +188,7 @@ $red: #F16D7F;
     }
 
     .content__item-text {
+        display: block;
         font-weight: 300;
         font-size: 14px;
         line-height: 17px;
@@ -195,16 +206,57 @@ $red: #F16D7F;
         margin-bottom: 20px;
     }
 
-    .ground {
-        background-image: url("img/Rectangle2copy.fon.png");
+    .ground {    
+        max-width: 360px;
+        width: 100%;
+        height: 420px;   
         display: flex;
         justify-content: center;
-        min-height: 420px;
+        align-items: center;
+    }
+
+    .content__item-btn {
+        visibility: hidden;
+        position: absolute;
+        top: 26%;
+        left: 32%;
+        border: 1px solid #fff;
+        padding: 11px 13px;
+        display: flex;
+        align-items: center;
+        background: transparent;
+        color: #fff;
+
+        & svg {
+            fill: #fff;
+            margin-right: 10px;
+        }
+
+        & span {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+        }
+    }
+
+    .content__item:hover .content__item-btn {
+        visibility: visible;
+    }
+
+    .content__item-btn:hover {
+        color: red;
     }
 
     .content__btn {
         display: flex;
         justify-content: center;
+        
+    }
+
+    .content__link:hover {
+        background: #F16D7F;
+        color: #fff;
     }
 
     .content__link {
@@ -375,9 +427,11 @@ $red: #F16D7F;
 @import "../css/block/footer";
 
 @import "../css/block/shop";
+
 @import "../css/block/regist";
 
 /* =============Index========== */
+
 
 @media(max-width: 768px) {
     .container {
@@ -420,22 +474,23 @@ $red: #F16D7F;
     }
 
     .merch {
-        margin: 20px 16px 164px;
+        margin: 20px 16px 155px;
 
         .merch__block-top {
-            display: flex;
-            
+            display: flex;           
         }
 
         .merch__item {
             max-width: 232px;
-            min-height: 168px;
-            background-size: 100%;
+            height: 168px;
+            background-size: 100% 100%;
             background-repeat: no-repeat;
         }
         
         .merch__block-bot {
             max-width: 735px;
+            width: 100%;
+            height: 116px;
         }
     }
 
@@ -456,6 +511,10 @@ $red: #F16D7F;
 
         .content__btn {
             margin-top: 33px;
+        }
+
+        .content__item:nth-child(6) {
+            display: block;
         }
     }
 
@@ -584,12 +643,32 @@ $red: #F16D7F;
     .content {
         margin-top: 64px;
 
+        .content__filter {
+            display: flex;
+            max-width: 260px;
+            width: 100%;
+
+            .list__size {
+                margin: 0 12px;
+            }
+        }
+
         .content__block {
             margin: 0 8px 0;
         }
 
         .content__btn {
             margin-top: 41px;
+        }
+
+        .content__photo {
+            width: 100%;
+        }
+
+        .ground {
+            max-width: 360px;
+            width: 100%;
+            height: 420px;           
         }
     }
 
@@ -797,3 +876,149 @@ $red: #F16D7F;
 
 /* =============Cart========== */
 
+@media(max-width: 768px) {
+    .shop {
+        margin-top: 68px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;      
+
+        .box__btn {
+            max-width: 508px;
+            width: 100%;
+            margin: 60px auto;
+        }
+
+        .shop__right {
+            max-width: 754px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .shop__form input {
+                width: 360px
+            }
+        }
+    }
+}
+
+@media(max-width: 375px) {
+    .arrival__box {
+        display: flex;
+        justify-content: center;
+
+        .arrival__title {
+            margin-top: 50px;
+        }
+    }
+
+    .shop {
+        padding: 0 8px;
+
+        .shop__item {
+            max-width: 358px;
+            width: 100%;
+            height: 188px;
+    
+            .shop__title {
+                margin-bottom: 26px;
+            }
+    
+            .shop__descript {
+                margin-top: 13px;
+                padding-left: 16px;
+            }
+            
+            .shop__descript h3 {
+                font-size: 16px;
+                line-height: 19px;
+            }
+    
+            .shop__descript p {
+                font-size: 14px;
+                line-height: 17px;
+    
+                .shop__span-two {
+                    margin-left: 20px;
+                }
+            }
+    
+            .close__btn {
+                width: 10px;
+                height: 10px;
+                margin-top: 17px;
+                margin-right: 12px;
+            }
+    
+            .close__btn::before {
+                content: "";
+                width: 12px;
+                height: 2px;
+                background: #575757;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 17px;
+                right: 12px;
+            }
+        
+            .close__btn::after {
+                content: "";
+                width: 12px;
+                height: 2px;
+                background: #575757;
+                transform: rotate(-45deg);
+                position: absolute;
+                top: 17px;
+                right: 12px;
+            }
+        }
+
+        .box__btn button {
+            max-width: 174px;
+            width: 100%;
+            min-height: 32px;
+            padding: 9px 13px 9px 13px;
+            font-size: 12px;
+            line-height: 14px
+        }
+
+        .shop__total {
+            margin-top: 48px;
+        }
+    }
+    
+    .shop__right {
+        display: flex;
+        flex-direction: column;
+    }    
+}
+
+/* =============Registration========== */
+
+@media(max-width: 768px) {
+    .regist {
+        margin-top: 40px;
+        padding: 0 16px;
+    }
+
+    .regist__right {
+        max-width: 354px;
+        width: 100%;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media(max-width: 375px) {
+    .regist {
+        display: flex;
+        flex-direction: column;
+        padding: 0 9px;
+        margin-bottom: 96px;
+
+        .regist__right {
+            margin-top: 40px;
+        }
+    }
+}

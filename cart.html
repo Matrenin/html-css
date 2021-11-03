@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>Cart</title>
 </head>
@@ -14,7 +14,7 @@
         <div class="header__box container">   
             <div class="header__left">
                 <a href="index.html" class="header__logo">
-                    <img src="../img/brand.svg" alt="header-logo" class="header__logo-left" height = "19">
+                    <img src="img/brand.svg" alt="header-logo" class="header__logo-left" height = "19">
                 </a>                    
                 <form action="#" class="search">
                     <label for="header-search" class = "search__icon-label"></label>
@@ -122,7 +122,9 @@
             <div class="shop__left">                
                 <div class="shop__box">
                     <article class="shop__item">
-                        <img src="../img/ctang.png" alt="shop-photo" class="shop__photo">
+                        <div class="shop__photo">
+                            <img src="img/ctang.png" alt="shop-photo" height="306">
+                        </div>
                         <div class="shop__descript">
                             <div class="shop__title">
                                 <h3>MANGO PEOPLE</h3>
@@ -137,7 +139,9 @@
                     </article>
 
                     <article class="shop__item">
-                        <img src="../img/ctan2.png" alt="shop-photo" class="shop__photo">
+                        <div class="shop__photo">
+                            <img src="img/ctan2.png" alt="shop-photo" height="306">
+                        </div>
                         <div class="shop__descript">
                             <div class="shop__title">
                                 <h3>MANGO PEOPLE</h3>
@@ -151,8 +155,8 @@
                         <button class="close__btn"></button>
                     </article>
                     <div class="box__btn">
-                        <button>CLEAR SHOPPING CART</button>
-                        <button>CONTINUE SHOPPING</button>
+                        <button type="submit">CLEAR SHOPPING CART</button>
+                        <button type="submit">CONTINUE SHOPPING</button>
                     </div>
                 </div>
             </div>
