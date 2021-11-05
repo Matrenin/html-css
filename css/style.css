@@ -1003,9 +1003,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .merch .merch__item {
@@ -1046,6 +1048,7 @@ body {
 
 .merch .men {
   background-image: url("../img/Group37.png");
+  margin: 0 30px;
 }
 
 .merch .kids {
@@ -1306,7 +1309,7 @@ body {
   background-image: url("../img/photosubscribe.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 
 .subscribe .subscribe__block {
@@ -1486,9 +1489,7 @@ body {
 }
 
 .shop .shop__item {
-  max-width: 652px;
-  width: 100%;
-  min-height: 306px;
+  height: 306px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1504,18 +1505,17 @@ body {
 .shop .shop__photo {
   max-width: 262px;
   width: 100%;
-  min-height: 306px;
+  height: 306px;
 }
 
 .shop .shop__photo img {
-  width: 100%;
-  height: 100%;
+  position: cover;
 }
 
 .shop .shop__descript {
   max-width: 262px;
   width: 100%;
-  margin: 22px 0 62px 0;
+  padding: 22px 0 62px 31px;
 }
 
 .shop .shop__title {
@@ -1549,38 +1549,30 @@ body {
   border: 1px solid #EAEAEA;
 }
 
+.shop .shop__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.shop .shop__number input {
+  width: 42px;
+  height: 24px;
+  margin-left: 24px;
+  text-align: center;
+}
+
 .shop .close__btn {
-  display: block;
   width: 18px;
   height: 18px;
   border: none;
-  margin-top: 22px;
-  margin-right: 24px;
+  margin-top: 28px;
+  margin-right: 22px;
   background: transparent;
-}
-
-.shop .close__btn::before {
-  content: "";
-  width: 20px;
-  height: 2px;
-  background: #575757;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  position: absolute;
-  top: 28px;
-  right: 24px;
-}
-
-.shop .close__btn::after {
-  content: "";
-  width: 20px;
-  height: 2px;
-  background: #575757;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  position: absolute;
-  top: 28px;
-  right: 24px;
+  background-image: url("../img/x.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 
 .shop .box__btn {
@@ -1611,6 +1603,8 @@ body {
 }
 
 .shop .shop__form {
+  max-width: 360px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1909,6 +1903,20 @@ body {
 }
 
 /* =============Index========== */
+@media (max-width: 1140px) {
+  .merch .kids {
+    margin-top: 20px;
+  }
+  .content .content__block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .content .content__item {
+    margin: 30px 4px;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     margin-left: 0;
@@ -1949,6 +1957,8 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
   .merch .merch__item {
     max-width: 232px;
@@ -1961,15 +1971,15 @@ body {
     width: 100%;
     height: 116px;
   }
+  .merch .kids {
+    margin: 0;
+  }
   .content .content__subtitle {
     margin-top: 3px;
     margin-bottom: 73px;
   }
   .content .content__block {
     margin: 0 16px 0;
-  }
-  .content .content__item {
-    margin-bottom: 16px;
   }
   .content .content__btn {
     margin-top: 33px;
@@ -2048,6 +2058,9 @@ body {
   .header .cart__btn {
     display: none;
   }
+  .merch .men {
+    margin: 0;
+  }
   .intro .intro__img {
     display: none;
   }
@@ -2105,6 +2118,9 @@ body {
   .content .content__filter .list__size {
     margin: 0 12px;
   }
+  .content .content__item {
+    margin: 16px 6px;
+  }
   .content .content__block {
     margin: 0 8px 0;
   }
@@ -2122,6 +2138,9 @@ body {
   .feature {
     margin-top: 96px;
     padding-bottom: 33px;
+  }
+  .subscribe {
+    margin-top: 0;
   }
   .subscribe .subscribe__block {
     padding-top: 11px;
@@ -2286,6 +2305,9 @@ body {
     font-size: 10px;
     line-height: 12px;
   }
+  .content .content__item:last-child {
+    display: block;
+  }
   .women__text {
     padding: 0 24px;
   }
@@ -2297,15 +2319,13 @@ body {
     top: 60px;
     left: -55px;
   }
-  .subscribe {
-    margin-top: 60px;
-  }
 }
 
 /* =============Cart========== */
 @media (max-width: 768px) {
   .shop {
-    margin-top: 68px;
+    max-width: 768px;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2317,14 +2337,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-  .shop .box__btn {
-    max-width: 508px;
-    width: 100%;
-    margin: 60px auto;
-  }
   .shop .shop__right {
-    max-width: 754px;
-    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2332,89 +2345,82 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .shop .shop__right .shop__form input {
-    width: 360px;
+  .shop .shop__form {
+    max-width: 360px;
+    width: 100%;
   }
-}
-
-@media (max-width: 375px) {
-  .arrival__box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .shop .box__btn {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .arrival__box .arrival__title {
-    margin-top: 50px;
+  .shop .box__btn button {
+    margin: 0 49px;
   }
+  .shop .shop__right {
+    margin-top: 64px;
+    max-width: 768px;
+    width: 100%;
+  }
+  .shop .shop__form {
+    margin-left: 16px;
+  }
+  .shop .shop__total {
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 375px) {
   .shop {
-    padding: 0 8px;
+    margin: 39px 0 0 0;
+  }
+  .shop .shop__left {
+    max-width: 360px;
+    width: 100%;
   }
   .shop .shop__item {
     max-width: 358px;
     width: 100%;
     height: 188px;
   }
-  .shop .shop__item .shop__title {
+  .shop .shop__photo {
+    max-width: 144px;
+    width: 100%;
+    height: 188px;
+  }
+  .shop .shop__descript {
+    max-width: 143px;
+    width: 100%;
+    padding: 13px 31px 38px 16px;
+  }
+  .shop .shop__title {
     margin-bottom: 26px;
   }
-  .shop .shop__item .shop__descript {
-    margin-top: 13px;
-    padding-left: 16px;
-  }
-  .shop .shop__item .shop__descript h3 {
+  .shop .shop__title h3 {
     font-size: 16px;
     line-height: 19px;
   }
-  .shop .shop__item .shop__descript p {
+  .shop .shop__item-text {
     font-size: 14px;
     line-height: 17px;
   }
-  .shop .shop__item .shop__descript p .shop__span-two {
-    margin-left: 20px;
+  .shop .shop__number input {
+    width: 24px;
+    height: 14px;
+    margin-right: 8px;
   }
-  .shop .shop__item .close__btn {
-    width: 10px;
-    height: 10px;
-    margin-top: 17px;
-    margin-right: 12px;
-  }
-  .shop .shop__item .close__btn::before {
-    content: "";
-    width: 12px;
-    height: 2px;
-    background: #575757;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    position: absolute;
-    top: 17px;
-    right: 12px;
-  }
-  .shop .shop__item .close__btn::after {
-    content: "";
-    width: 12px;
-    height: 2px;
-    background: #575757;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    position: absolute;
-    top: 17px;
-    right: 12px;
+  .shop .box__btn {
+    margin-top: 30px;
   }
   .shop .box__btn button {
-    max-width: 174px;
-    width: 100%;
-    min-height: 32px;
-    padding: 9px 13px 9px 13px;
+    padding: 9px 15px;
+    margin: 0 4px;
     font-size: 12px;
     line-height: 14px;
   }
-  .shop .shop__total {
-    margin-top: 48px;
-  }
-  .shop__right {
+  .shop .shop__right {
+    max-width: 360px;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2422,6 +2428,16 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .shop .shop__form {
+    margin-left: 0;
+  }
+  .shop .shop__form input {
+    max-width: 358px;
+    width: 100%;
+  }
+  .shop .shop__total {
+    margin-right: 0;
   }
 }
 
