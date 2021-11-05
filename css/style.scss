@@ -82,7 +82,8 @@ $red: #F16D7F;
 
     .merch__block-top {
         display: flex; 
-        justify-content: space-between;   
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .merch__item {
@@ -114,7 +115,8 @@ $red: #F16D7F;
     }
 
     .men {       
-        background-image : url("../img/Group37.png");      
+        background-image : url("../img/Group37.png"); 
+        margin: 0 30px;     
     }
 
     .kids {
@@ -336,7 +338,7 @@ $red: #F16D7F;
     background-image: url("../img/photosubscribe.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
 
     .subscribe__block {
         display: flex;
@@ -432,6 +434,23 @@ $red: #F16D7F;
 
 /* =============Index========== */
 
+@media(max-width: 1140px) {
+    .merch {
+        .kids {
+            margin-top: 20px;
+        }
+    }
+
+    .content {
+        .content__block {
+            justify-content: center;
+        }
+
+        .content__item {
+            margin: 30px 4px;
+        }
+    }
+}
 
 @media(max-width: 768px) {
     .container {
@@ -477,7 +496,8 @@ $red: #F16D7F;
         margin: 20px 16px 155px;
 
         .merch__block-top {
-            display: flex;           
+            display: flex; 
+            flex-wrap:nowrap;          
         }
 
         .merch__item {
@@ -492,6 +512,10 @@ $red: #F16D7F;
             width: 100%;
             height: 116px;
         }
+
+        .kids {
+            margin: 0;
+        }
     }
 
     .content {
@@ -502,11 +526,8 @@ $red: #F16D7F;
         }
 
         .content__block {
+            
             margin: 0 16px 0;
-        }
-
-        .content__item {
-            margin-bottom: 16px;
         }
 
         .content__btn {
@@ -591,6 +612,12 @@ $red: #F16D7F;
         }
     }
 
+    .merch {
+        .men {
+            margin: 0;
+        }
+    }
+
     .intro {
         .intro__img {
             display: none;
@@ -653,6 +680,10 @@ $red: #F16D7F;
             }
         }
 
+        .content__item {
+            margin: 16px 6px;
+        }
+
         .content__block {
             margin: 0 8px 0;
         }
@@ -677,7 +708,8 @@ $red: #F16D7F;
         padding-bottom: 33px;
     }
 
-    .subscribe {   
+    .subscribe { 
+        margin-top: 0;  
 
         .subscribe__block {
             padding-top: 11px;
@@ -856,6 +888,12 @@ $red: #F16D7F;
             }
         }
     }
+
+    .content {
+        .content__item:last-child {
+            display: block;
+        }
+    }
     .women__text {
         padding: 0 24px;
     }
@@ -868,129 +906,131 @@ $red: #F16D7F;
         top: 60px;
         left: -55px;
     }
-
-    .subscribe {
-        margin-top: 60px;
-    }
 }
 
 /* =============Cart========== */
 
 @media(max-width: 768px) {
     .shop {
-        margin-top: 68px;
+        max-width: 768px;
+        width: 100%;
         display: flex;
-        flex-direction: column; 
-        align-items: center;      
+        flex-direction: column;
+        align-items: center;
+
+        .shop__right {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .shop__form {
+            max-width: 360px;
+            width: 100%;
+        }
 
         .box__btn {
-            max-width: 508px;
-            width: 100%;
-            margin: 60px auto;
+            justify-content: center;
+
+            & button {
+                margin: 0 49px;
+            }
         }
 
         .shop__right {
-            max-width: 754px;
+            margin-top: 64px;
+            max-width: 768px;
             width: 100%;
-            display: flex;
-            justify-content: space-between;
+        }
 
-            .shop__form input {
-                width: 360px
-            }
+        .shop__form {
+            margin-left: 16px;
+        }
+
+        .shop__total {
+            margin-right: 16px;
         }
     }
 }
 
 @media(max-width: 375px) {
-    .arrival__box {
-        display: flex;
-        justify-content: center;
-
-        .arrival__title {
-            margin-top: 50px;
-        }
-    }
-
     .shop {
-        padding: 0 8px;
+        margin: 39px 0 0 0;
+
+        .shop__left {
+            max-width: 360px;
+            width: 100%;
+        }
 
         .shop__item {
             max-width: 358px;
             width: 100%;
             height: 188px;
-    
-            .shop__title {
-                margin-bottom: 26px;
-            }
-    
-            .shop__descript {
-                margin-top: 13px;
-                padding-left: 16px;
-            }
-            
-            .shop__descript h3 {
+        }
+
+        .shop__photo {
+            max-width: 144px;
+            width: 100%;
+            height: 188px;
+        }
+
+        .shop__descript {
+            max-width: 143px;
+            width: 100%;
+            padding: 13px 31px 38px 16px;
+        }
+
+        .shop__title {
+            margin-bottom: 26px;
+
+            & h3 {
                 font-size: 16px;
                 line-height: 19px;
             }
-    
-            .shop__descript p {
-                font-size: 14px;
-                line-height: 17px;
-    
-                .shop__span-two {
-                    margin-left: 20px;
-                }
-            }
-    
-            .close__btn {
-                width: 10px;
-                height: 10px;
-                margin-top: 17px;
-                margin-right: 12px;
-            }
-    
-            .close__btn::before {
-                content: "";
-                width: 12px;
-                height: 2px;
-                background: #575757;
-                transform: rotate(45deg);
-                position: absolute;
-                top: 17px;
-                right: 12px;
-            }
-        
-            .close__btn::after {
-                content: "";
-                width: 12px;
-                height: 2px;
-                background: #575757;
-                transform: rotate(-45deg);
-                position: absolute;
-                top: 17px;
-                right: 12px;
-            }
+        }
+
+        .shop__item-text {
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        .shop__number input {
+            width: 24px;
+            height: 14px;
+            margin-right: 8px;
+        }
+
+        .box__btn {
+            margin-top: 30px;
+            
         }
 
         .box__btn button {
-            max-width: 174px;
-            width: 100%;
-            min-height: 32px;
-            padding: 9px 13px 9px 13px;
+            padding: 9px 15px;
+            margin: 0 4px;
             font-size: 12px;
-            line-height: 14px
+            line-height: 14px;
+        }
+
+        .shop__right {
+            max-width: 360px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .shop__form {
+            margin-left: 0;
+
+            & input {
+                max-width: 358px;
+                width: 100%;
+            }
         }
 
         .shop__total {
-            margin-top: 48px;
+            margin-right: 0;
         }
     }
-    
-    .shop__right {
-        display: flex;
-        flex-direction: column;
-    }    
 }
 
 /* =============Registration========== */
